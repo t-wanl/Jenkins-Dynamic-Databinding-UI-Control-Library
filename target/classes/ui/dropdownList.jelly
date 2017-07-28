@@ -34,10 +34,18 @@ THE SOFTWARE.
     <st:attribute name="name" use="required">
       name of the drop-down list.
     </st:attribute>
+      <st:attribute name="tablename" use="required">
+          name of "table" tag. Should be different from "name" attribute.
+      </st:attribute>
     <st:attribute name="help">
       Path to the inline help. See &lt;f:entry help="..." />
     </st:attribute>
   </st:documentation>
+
+    <st:adjunct includes="ui.dropdownList.dropdownList"/>
+
+    <!-- this figures out the 'fillUrl' and 'fillDependsOn' attribute -->
+    ${descriptor.calcFillSettings(name,attrs)}
 
     <tr>
         <td class="setting-leftspace"><st:nbsp/></td>
@@ -46,10 +54,16 @@ THE SOFTWARE.
         </td>
         <td class="setting-main">
             <!-- create drop-down list -->
-            <select class="setting-input dropdownList" name="${attrs.name}">
+            <m:select  xmlns:m="jelly:hudson.util.jelly.MorphTagLibrary"
+                       class="setting-input dropdownList" name="${name}"
+                       ATTRIBUTES="${attrs}" EXCEPT="field clazz">
                 <j:set var="dropdownListMode" value="createSelectField"/>
                 <d:invokeBody/>
-            </select>
+            </m:select>
+            <!--<select class="setting-input dropdownList" name="${name + 'Selected'}">-->
+            <!--<j:set var="dropdownListMode" value="createSelectField"/>-->
+            <!--<d:invokeBody/>-->
+            <!--</select>-->
         </td>
         <f:helpLink url="${attrs.help}" featureName="${title}"/>
     </tr>
@@ -58,7 +72,7 @@ THE SOFTWARE.
     <tr class="dropdownList-container">
       <td colspan="2"/>
       <td colspan="2">
-        <table width="100%" name="${name}">
+        <table width="100%" name="${tablename}">
             <j:set var="dropdownListMode" value="generateEntries"/>
             <d:invokeBody/>
         </table>
