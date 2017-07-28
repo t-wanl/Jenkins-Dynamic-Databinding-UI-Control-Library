@@ -10,9 +10,9 @@
         <version>2.6</version>
     </parent>
 
-    <groupId>com.microsoft.azure</groupId>
+    <groupId>albertxavier</groupId>
     <artifactId>tags</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <licenses>
         <license>
@@ -24,7 +24,7 @@
 
     <developers>
         <developer>
-            <id>arroyc_microsoft</id>
+            <id>albertxavier</id>
             <name>Wanpeng Li</name>
             <email>t-wanl@microsoft.com</email>
         </developer>
