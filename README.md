@@ -37,7 +37,7 @@ Please refer to
 [Demo-Jenkins-UI](https://github.com/t-wanl/Demo-Jenkins-UI) for detailed demo.
 
 ## General
-In <j:jelly> defines `xmlns:ui="/ui"`, then use namesapce `ui` in tag ddefined in this library. E.g. `<ui:dropdownList>`
+In `<j:jelly>` defines `xmlns:ui="/ui"`, then use namesapce `ui` in tag ddefined in this library. E.g. `<ui:dropdownList>`
 
 ## &lt;downdownList&gt;
 
