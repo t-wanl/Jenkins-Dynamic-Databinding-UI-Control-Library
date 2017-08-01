@@ -19,9 +19,9 @@ under the License.
 -->
 <rss version="0.91">
   <channel>
-    <title>tags - Checkstyle report</title>
+    <title>jenkins-dynamic-databinding-ui-controller-library - Checkstyle report</title>
     <link>${project.url}</link>
-    <description>tags - Checkstyle report</description>
+    <description>jenkins-dynamic-databinding-ui-controller-library - Checkstyle report</description>
     <language>en-us</language>
     <copyright>&#169;2016 - 2017</copyright>
     <item>

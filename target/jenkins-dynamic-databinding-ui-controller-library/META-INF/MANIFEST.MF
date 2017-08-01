@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Built-By: albertxavier
+Created-By: Apache Maven
+Build-Jdk: 1.8.0_45
+Extension-Name: jenkins-dynamic-databinding-ui-controller-library
+Specification-Title: The Jenkins Plugins Parent POM Project
+Implementation-Title: jenkins-dynamic-databinding-ui-controller-library
+Implementation-Version: 1.0
+Group-Id: albertxavier
+Short-Name: jenkins-dynamic-databinding-ui-controller-library
+Long-Name: jenkins-dynamic-databinding-ui-controller-library
+Plugin-Version: 1.0
+Hudson-Version: 1.625.3
+Jenkins-Version: 1.625.3
+Plugin-Dependencies: plain-credentials:1.3,cloud-stats:0.11
+Plugin-Developers: Wanpeng Li:albertxavier:t-wanl@microsoft.com
+Support-Dynamic-Loading: true
+
