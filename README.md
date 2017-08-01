@@ -1,4 +1,4 @@
-# Jenkins Dynamic Databinding UI Controller Library
+# Jenkins Dynamic Databinding UI Control Library
 
 Jenkins UI controller library supports dynamic databinding, including some useful jelly tags like &lt;dropdownList&gt; and &lt;radioBlock&gt;.
 
@@ -9,23 +9,17 @@ Add `<repository>` and `<dependency>`in pom.xml:
 ```
 <repositories>
     <repository>
-    <id>tags</id>
-    <name>Custom Tags</name>
-    <url>https://raw.githubusercontent.com/t-wanl/tags/master/jar/</url>
+        <id>tags</id>
+        <name>Custom Tags</name>
+        <url>https://raw.githubusercontent.com/t-wanl/Jenkins-Dynamic-Databinding-UI-Control-Library/master/jar/</url>
     </repository>
 </repositories>
 
 <dependencies>
     <dependency>
-        <groupId>org.assertj</groupId>
-        <artifactId>assertj-core</artifactId>
-        <version>1.5.0</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-    <groupId>albertxavier</groupId>
-    <artifactId>tags</artifactId>
-    <version>1.0</version>
+        <groupId>albertxavier</groupId>
+        <artifactId>jenkins-dynamic-databinding-ui-controller-library</artifactId>
+        <version>1.0</version>
     </dependency>
 </dependencies>
 ```
