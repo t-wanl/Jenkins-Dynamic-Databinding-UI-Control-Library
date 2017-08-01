@@ -26,17 +26,16 @@ THE SOFTWARE.
          xmlns:t="/lib/hudson" xmlns:f="/lib/form">
   <st:documentation>
     Foldable block expanded when the corresponding item is selected in the drop-down list.
-
     <st:attribute name="title">
       Human readable title text of this drop-down listbox.
       Shown in the same position as &lt;f:entry title="..." />
     </st:attribute>
-    <st:attribute name="name" use="required">
-      name of the drop-down list.
+    <st:attribute name="selectedName" use="required">
+      Selected name of the drop-down list.
     </st:attribute>
-      <st:attribute name="tablename" use="required">
-          name of "table" tag. Should be different from "name" attribute.
-      </st:attribute>
+    <st:attribute name="name" use="required">
+      Name of "table" tag. Should be different from "name" attribute.
+    </st:attribute>
     <st:attribute name="help">
       Path to the inline help. See &lt;f:entry help="..." />
     </st:attribute>
@@ -45,7 +44,7 @@ THE SOFTWARE.
     <st:adjunct includes="ui.dropdownList.dropdownList"/>
 
     <!-- this figures out the 'fillUrl' and 'fillDependsOn' attribute -->
-    ${descriptor.calcFillSettings(name,attrs)}
+    ${descriptor.calcFillSettings(selectedName, attrs)}
 
     <tr>
         <td class="setting-leftspace"><st:nbsp/></td>
@@ -55,15 +54,11 @@ THE SOFTWARE.
         <td class="setting-main">
             <!-- create drop-down list -->
             <m:select  xmlns:m="jelly:hudson.util.jelly.MorphTagLibrary"
-                       class="setting-input dropdownList" name="${name}"
+                       class="setting-input dropdownList" name="${selectedName}"
                        ATTRIBUTES="${attrs}" EXCEPT="field clazz">
                 <j:set var="dropdownListMode" value="createSelectField"/>
                 <d:invokeBody/>
             </m:select>
-            <!--<select class="setting-input dropdownList" name="${name + 'Selected'}">-->
-            <!--<j:set var="dropdownListMode" value="createSelectField"/>-->
-            <!--<d:invokeBody/>-->
-            <!--</select>-->
         </td>
         <f:helpLink url="${attrs.help}" featureName="${title}"/>
     </tr>
@@ -72,7 +67,7 @@ THE SOFTWARE.
     <tr class="dropdownList-container">
       <td colspan="2"/>
       <td colspan="2">
-        <table width="100%" name="${tablename}">
+        <table width="100%" name="${name}">
             <j:set var="dropdownListMode" value="generateEntries"/>
             <d:invokeBody/>
         </table>

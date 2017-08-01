@@ -1,3 +1,6 @@
+/*
+* Update dropdownList base on other UI controller.
+*/
 function updateDropdownListView (e, url, config) {
 
     if (url == null) return;
