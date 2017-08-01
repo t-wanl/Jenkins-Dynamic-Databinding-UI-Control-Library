@@ -1,6 +1,6 @@
 # Jenkins Dynamic Databinding UI Control Library
 
-Jenkins UI controller library supports dynamic databinding, including some useful jelly tags like &lt;dropdownList&gt; and &lt;radioBlock&gt;.
+Jenkins UI control library supports dynamic databinding, including some useful jelly tags like &lt;dropdownList&gt; and &lt;radioBlock&gt;.
 
 # Configuration
 
@@ -18,7 +18,7 @@ Add `<repository>` and `<dependency>`in pom.xml:
 <dependencies>
     <dependency>
         <groupId>albertxavier</groupId>
-        <artifactId>jenkins-dynamic-databinding-ui-controller-library</artifactId>
+        <artifactId>jenkins-dynamic-databinding-ui-control-library</artifactId>
         <version>1.0</version>
     </dependency>
 </dependencies>
